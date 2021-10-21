@@ -105,7 +105,7 @@
         const next = () => {
           const timeSoFar = Date.now() - startAt
           if (timeSoFar >= duration) {
-            this.setLevel(0)
+            this.setLevel(levelEnd)
             this.setDischargingTime(0)
             resolve()
           } else {
@@ -139,7 +139,7 @@
         const next = () => {
           const timeSoFar = Date.now() - start
           if (timeSoFar >= duration) {
-            this.setLevel(1)
+            this.setLevel(levelEnd)
             this.setChargingTime(0)
             resolve()
           } else {
